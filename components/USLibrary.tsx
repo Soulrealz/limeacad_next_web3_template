@@ -51,6 +51,7 @@ const USLibrary = ({ contractAddress }: USContract) => {
     const result:any = [name, votesBiden, votesTrump, stateSeats];
     const tx = await usElectionContract.submitStateResult(result);
     await tx.wait();
+    //tx object has the hash ;
     resetForm();
   }
 
